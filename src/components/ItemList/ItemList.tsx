@@ -1,6 +1,8 @@
 import React from "react";
+import iconAddToCart from "./../../../assets/images/icon-add-to-cart.svg";
+import iconDecrement from "./../../../assets/images/icon-decrement-quantity.svg";
+import iconIncrement from "./../../../assets/images/icon-increment-quantity.svg";
 import styles from "./ItemList.module.css";
-
 interface Item {
   image: {
     desktop: string;
@@ -51,7 +53,7 @@ const ItemList: React.FC<ItemListProps> = ({
             {itemState[i]?.isAdded ? (
               <>
                 <img
-                  src="../assets/images/icon-decrement-quantity.svg"
+                  src={iconDecrement}
                   alt=""
                   className={styles.incDec}
                   onClick={(e) => {
@@ -61,7 +63,7 @@ const ItemList: React.FC<ItemListProps> = ({
                 />
                 {itemState[i]?.count}
                 <img
-                  src="../assets/images/icon-increment-quantity.svg"
+                  src={iconIncrement}
                   alt=""
                   className={styles.incDec}
                   onClick={(e) => {
@@ -72,23 +74,16 @@ const ItemList: React.FC<ItemListProps> = ({
               </>
             ) : (
               <>
-                <img
-                  src="../assets/images/icon-add-to-cart.svg"
-                  alt=""
-                />
+                <img src={iconAddToCart} alt="" />
                 Add to Cart
               </>
             )}
           </button>
 
           <div className={styles.itemdetails}>
-            <p className={styles.itemcategory}>
-              {item.category}
-            </p>
+            <p className={styles.itemcategory}>{item.category}</p>
             <p className={styles.itemname}>{item.name}</p>
-            <p className={styles.itemprice}>
-              ${item.price.toFixed(2)}
-            </p>
+            <p className={styles.itemprice}>${item.price.toFixed(2)}</p>
           </div>
         </li>
       ))}

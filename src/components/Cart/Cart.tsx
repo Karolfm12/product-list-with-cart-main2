@@ -1,4 +1,7 @@
 import React from "react";
+import iconCarbonNeutral from "./../../../assets/images/icon-carbon-neutral.svg";
+import removeIcon from "./../../../assets/images/icon-remove-item.svg";
+import iconEmptyCart from "./../../../assets/images/illustration-empty-cart.svg";
 import styles from "./Cart.module.css";
 export interface Item {
   image: {
@@ -55,8 +58,8 @@ const Cart: React.FC<CartProps> = ({
                   <div className={styles.right_buttonDelete}>
                     <img
                       className={styles.delete_item}
-                      onClick={(e) => onDeleteItem(i)}
-                      src="./../../../assets/images/icon-remove-item.svg"
+                      onClick={() => onDeleteItem(i)}
+                      src={removeIcon}
                       alt=""
                     />
                   </div>
@@ -76,10 +79,7 @@ const Cart: React.FC<CartProps> = ({
             <span className={styles.total_price}>${totalPrice.toFixed(2)}</span>
           </div>
           <div className={styles.neutral_delivery}>
-            <img
-              src="./../../../assets/images/icon-carbon-neutral.svg"
-              alt=""
-            />
+            <img src={iconCarbonNeutral} alt="" />
             <p>This is a carbon-neutral delivery</p>
           </div>
           <button
@@ -91,10 +91,7 @@ const Cart: React.FC<CartProps> = ({
         </>
       ) : (
         <div className={styles.empty_cart}>
-          <img
-            src="./../../../assets/images/illustration-empty-cart.svg"
-            alt=""
-          />
+          <img src={iconEmptyCart} alt="" />
           <p>Your added items will appear here</p>
         </div>
       )}
