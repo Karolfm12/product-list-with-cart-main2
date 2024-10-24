@@ -34,7 +34,7 @@ const ItemList: React.FC<ItemListProps> = ({
       {data.map((item, i) => (
         <li className={styles.item} key={i}>
           <img
-            src={item.image.desktop}
+            src={`${import.meta.env.BASE_URL}${item.image.desktop}`}
             alt=""
             className={
               itemState[i]?.isAdded
