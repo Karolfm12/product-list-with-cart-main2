@@ -1,7 +1,7 @@
 import React from "react";
-import iconCarbonNeutral from "./../../../assets/images/icon-carbon-neutral.svg";
-import removeIcon from "./../../../assets/images/icon-remove-item.svg";
-import iconEmptyCart from "./../../../assets/images/illustration-empty-cart.svg";
+import iconCarbonNeutral from "./../../../public/assets/images/icon-carbon-neutral.svg";
+import removeIcon from "./../../../public/assets/images/icon-remove-item.svg";
+import iconEmptyCart from "./../../../public/assets/images/illustration-empty-cart.svg";
 import styles from "./Cart.module.css";
 export interface Item {
   image: {

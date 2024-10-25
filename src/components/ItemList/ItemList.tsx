@@ -1,7 +1,7 @@
 import React from "react";
-import iconAddToCart from "./../../../assets/images/icon-add-to-cart.svg";
-import iconDecrement from "./../../../assets/images/icon-decrement-quantity.svg";
-import iconIncrement from "./../../../assets/images/icon-increment-quantity.svg";
+import iconAddToCart from "./../../../public/assets/images/icon-add-to-cart.svg";
+import iconDecrement from "./../../../public/assets/images/icon-decrement-quantity.svg";
+import iconIncrement from "./../../../public/assets/images/icon-increment-quantity.svg";
 import styles from "./ItemList.module.css";
 interface Item {
   image: {
