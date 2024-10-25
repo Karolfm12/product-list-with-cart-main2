@@ -41,7 +41,12 @@ const Popup: React.FC<PopupProps> = ({
                       <li key={i}>
                         <div className={styles.order_details}>
                           <div className={styles.order_details_left}>
-                            <img src={data[i].image.thumbnail} alt="" />
+                            <img
+                              src={`${import.meta.env.BASE_URL}${
+                                data[i].image.thumbnail
+                              }`}
+                              alt=""
+                            />
 
                             <div className={styles.order_details_left_box}>
                               <span className={styles.item_name}>
