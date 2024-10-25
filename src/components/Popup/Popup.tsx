@@ -1,4 +1,5 @@
 import React from "react";
+import iconOrderConfirmed from "./../../../public/assets/images/icon-order-confirmed.svg";
 import styles from "./Popup.module.css";
 interface Item {
   image: {
@@ -29,7 +30,7 @@ const Popup: React.FC<PopupProps> = ({
     <>
       <div className={styles.popup_overlay}>
         <div className={styles.popup}>
-          <img src="./../assets/images/icon-order-confirmed.svg" alt="" />
+          <img src={iconOrderConfirmed} alt="" />
           <h2>Orderd Confirmed</h2>
           <p>We hope You enjoy your food</p>
           <div className={styles.items_box}>

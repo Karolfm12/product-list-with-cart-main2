@@ -23,19 +23,18 @@ main {
 }
 
 .container {
-  max-width: 1440px;
-  padding: 80px;
+  width: 1440px;
+  padding: 80px 0 80px 50px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
 .container-left {
-  width: 62%;
+  max-width: 900px;
 }
 
 .container-right {
   width: 35%;
+  margin-left: 20px;
 }
 
 .cart-container {
@@ -61,4 +60,13 @@ h2 {
   font-size: 2rem;
   font-weight: 800;
   color: var(--Rose900);
+}
+
+@media screen and (max-width: 1260px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  .container-right {
+    width: 90%;
+  }
 }
